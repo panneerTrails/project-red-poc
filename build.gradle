@@ -1,11 +1,6 @@
-// In this section you declare where to find the dependencies of your project
-repositories {
-   mavenCentral()
-}
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: "war"
+apply plugin: 'war'
 
 war {
 	baseName = 'project-red-poc'
@@ -15,18 +10,17 @@ war {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+repositories {   
+	//mavenLocal()
+	mavenCentral()
+}
+
 dependencies {
 
-	compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
-    compile 'org.springframework:spring-core:4.0.3.RELEASE'
-    compile 'org.springframework:spring-aop:4.0.3.RELEASE'       
-    compile 'org.springframework:spring-web:4.0.3.RELEASE'       
-    compile 'org.springframework:spring-beans:4.0.3.RELEASE'  
-    compile 'org.springframework:spring-context:4.0.3.RELEASE'  
-    compile 'org.springframework:spring-tx:4.0.3.RELEASE'  
-    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.3.7.Final'
-    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: '1.0.0.Final'
+	compile "org.springframework:spring-webmvc:4.3.0.RELEASE"
+    compile "org.hibernate:hibernate-core:5.3.7.Final"
+    compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final"
         
-    testCompile("junit:junit:4.12")        
+    testCompile "junit:junit:4.12"   
     
 }
