@@ -20,6 +20,7 @@ dependencies {
 	compile "org.springframework:spring-webmvc:4.3.0.RELEASE"
     compile "org.hibernate:hibernate-core:5.3.7.Final"
     compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final"
+    compile "postgresql:postgresql:42.1.1"
         
     testCompile "junit:junit:4.12"   
     
